@@ -1,8 +1,9 @@
-[gd_scene load_steps=8 format=3 uid="uid://bitlm63srxjrr"]
+[gd_scene load_steps=9 format=3 uid="uid://bitlm63srxjrr"]
 
-[ext_resource type="PackedScene" uid="uid://dxvlkofxn0cm3" path="res://scenes/collectible.tscn" id="1_tvjv6"]
-[ext_resource type="Texture2D" uid="uid://b3jvq4ymfnb6" path="res://art/Sword.png" id="2_r85ep"]
-[ext_resource type="Script" path="res://scenes/sword.gd" id="2_uma3y"]
+[ext_resource type="PackedScene" uid="uid://dxvlkofxn0cm3" path="res://collectable/collectible.tscn" id="1_vba57"]
+[ext_resource type="Script" path="res://collectable/sword.gd" id="2_x47g7"]
+[ext_resource type="Texture2D" uid="uid://b3jvq4ymfnb6" path="res://art/Sword.png" id="3_0imrm"]
+[ext_resource type="Resource" uid="uid://d2ac81j12qqtp" path="res://inventory/items/sword.tres" id="3_o28tf"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_2fhkj"]
 resource_local_to_scene = true
@@ -45,14 +46,15 @@ _data = {
 "spin": SubResource("Animation_a5mv8")
 }
 
-[node name="Sword" instance=ExtResource("1_tvjv6")]
-script = ExtResource("2_uma3y")
+[node name="Sword" instance=ExtResource("1_vba57")]
+script = ExtResource("2_x47g7")
+itemRes = ExtResource("3_o28tf")
 
 [node name="CollisionShape2D" parent="." index="0"]
 shape = SubResource("RectangleShape2D_2fhkj")
 
 [node name="Sprite2D" parent="." index="1"]
-texture = ExtResource("2_r85ep")
+texture = ExtResource("3_0imrm")
 
 [node name="AnimationPlayer" type="AnimationPlayer" parent="." index="2"]
 libraries = {

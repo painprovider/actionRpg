@@ -1,9 +1,9 @@
 [gd_resource type="Resource" script_class="InventoryItem" load_steps=3 format=3 uid="uid://d2ac81j12qqtp"]
 
-[ext_resource type="Script" path="res://inventory/inventoryItem.gd" id="1_ydnvf"]
-[ext_resource type="Texture2D" uid="uid://b3jvq4ymfnb6" path="res://art/Sword.png" id="2_3f01f"]
+[ext_resource type="Script" path="res://inventory/inventoryItem.gd" id="1_gm2y5"]
+[ext_resource type="Texture2D" uid="uid://b3jvq4ymfnb6" path="res://art/Sword.png" id="2_48t18"]
 
 [resource]
-script = ExtResource("1_ydnvf")
+script = ExtResource("1_gm2y5")
 name = "Sword"
-texture = ExtResource("2_3f01f")
+texture = ExtResource("2_48t18")

@@ -1,8 +1,8 @@
-extends "res://scenes/collectible.gd"
+extends "res://collectable/collectible.gd"
 
 @onready var animation = $AnimationPlayer 
 
-func collect():
+func collect(inventory: Inventory):
 	animation.play("spin")
 	await animation.animation_finished
-	super.collect()
+	super(inventory)
