@@ -1,18 +1,13 @@
-[gd_scene load_steps=19 format=3 uid="uid://f3mbu8uxocr5"]
+[gd_scene load_steps=13 format=3 uid="uid://f3mbu8uxocr5"]
 
 [ext_resource type="PackedScene" uid="uid://bdx42kpi3rhof" path="res://player/player.tscn" id="1_dkc54"]
 [ext_resource type="Texture2D" uid="uid://t2yjgecdn0iy" path="res://art/TilesetFloor.png" id="1_g1063"]
-[ext_resource type="Script" path="res://scenes/world.gd" id="1_pi0m0"]
 [ext_resource type="Texture2D" uid="uid://obhg5f573i0r" path="res://art/TilesetNature.png" id="2_2l8y7"]
 [ext_resource type="Texture2D" uid="uid://dk8grq7i35r55" path="res://art/animatedFlower.png" id="3_gf28g"]
-[ext_resource type="PackedScene" uid="uid://dknr83j81egoo" path="res://scenes/lifepot.tscn" id="4_c7eil"]
 [ext_resource type="PackedScene" uid="uid://dc2b83w1b3men" path="res://enemies/slime.tscn" id="4_v6fr3"]
-[ext_resource type="PackedScene" uid="uid://bitlm63srxjrr" path="res://scenes/sword.tscn" id="5_dkbiv"]
 [ext_resource type="Script" path="res://scenes/FollowCam.gd" id="6_6pnki"]
 [ext_resource type="Script" path="res://enemies/slime.gd" id="8_7ijk8"]
 [ext_resource type="PackedScene" uid="uid://bb7imwlt2ft3k" path="res://gui/heartsContainer.tscn" id="8_f7b3y"]
-[ext_resource type="Script" path="res://scenes/CanvasLayer.gd" id="11_al4is"]
-[ext_resource type="PackedScene" uid="uid://b3q5i1w0deumv" path="res://gui/inventory_gui.tscn" id="12_p3sxk"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_2cvbw"]
 texture = ExtResource("1_g1063")
@@ -2813,11 +2808,6 @@ texture = ExtResource("2_2l8y7")
 0:0/0/physics_layer_0/angular_velocity = 0.0
 0:0/0/physics_layer_0/polygon_0/points = PackedVector2Array(-5.3125, 0.625, -4.9375, 2.125, -6.0625, 4.125, -5.5625, 5.875, -3.1875, 6.375, -0.3125, 6.75, 6.9375, 6.625, 12.9375, 6.75, 17.6875, 6.875, 20.3125, 5.625, 21.3125, 3.875, 20.5625, 1.875, 20.0625, 0.25)
 
-[sub_resource type="TileSetScenesCollectionSource" id="TileSetScenesCollectionSource_uuprv"]
-resource_name = "Collectibles"
-scenes/2/scene = ExtResource("4_c7eil")
-scenes/3/scene = ExtResource("5_dkbiv")
-
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_d3bav"]
 texture = ExtResource("3_gf28g")
 0:0/animation_frame_0/duration = 0.4
@@ -2838,11 +2828,9 @@ terrain_set_0/terrain_0/color = Color(0.113725, 0.858824, 0.670588, 1)
 sources/0 = SubResource("TileSetAtlasSource_2cvbw")
 sources/1 = SubResource("TileSetAtlasSource_h0kou")
 sources/5 = SubResource("TileSetAtlasSource_d3bav")
-sources/2 = SubResource("TileSetScenesCollectionSource_uuprv")
 
 [node name="World" type="Node2D"]
 y_sort_enabled = true
-script = ExtResource("1_pi0m0")
 
 [node name="TileMap" type="TileMap" parent="."]
 y_sort_enabled = true
@@ -2856,8 +2844,6 @@ layer_2/name = "trees"
 layer_2/y_sort_enabled = true
 layer_2/z_index = 1
 layer_2/tile_data = PackedInt32Array(393218, 1, 0, 524300, 1, 0, 196620, 1, 0, 655365, 1, 0, 786442, 1, 0, 655377, 1, 0, 458772, 1, 0, 327698, 1, 0, 196623, 1, 0, 983051, 1, 0, 262149, 1, 0, 393225, 5, 0, 393222, 5, 0, 262152, 5, 0, 524296, 5, 0, 589834, 5, 0, 0, 1179649, 9, 1, 1179649, 9, 2, 1179649, 9, 3, 1179649, 9, 4, 1179649, 9, 5, 1179649, 9, 6, 1179649, 9, 7, 1179649, 9, 8, 1179649, 9, 9, 1179649, 9, 10, 1179649, 9, 11, 1179649, 9, 12, 1179649, 9, 13, 1179649, 9, 14, 1179649, 9, 15, 1179649, 9, 16, 1179649, 9, 17, 1179649, 9, 18, 1179649, 9, 19, 1179649, 9, 20, 1179649, 9, 21, 1179649, 9, 22, 1179649, 9, 23, 1179649, 9, 24, 1179649, 9, 25, 1179649, 9, 26, 1179649, 9, 27, 1179649, 9, 28, 1179649, 9, 29, 1179649, 9, 30, 1179649, 9, 65536, 1179649, 9, 131072, 1179649, 9, 196608, 1179649, 9, 262144, 1179649, 9, 327680, 1179649, 9, 393216, 1179649, 9, 458752, 1179649, 9, 524288, 1179649, 9, 589824, 1179649, 9, 655360, 1179649, 9, 720896, 1179649, 9, 786432, 1179649, 9, 851968, 1179649, 9, 917504, 1179649, 9, 983040, 1179649, 9, 1048576, 1179649, 9, 1114112, 1179649, 9, 1179648, 1179649, 9, 1179649, 1179649, 9, 1179650, 1179649, 9, 1179651, 1179649, 9, 1179652, 1179649, 9, 1179653, 1179649, 9, 1179654, 1179649, 9, 1179655, 1179649, 9, 1179656, 1179649, 9, 1179657, 1179649, 9, 1179658, 1179649, 9, 1179659, 1179649, 9, 1179660, 1179649, 9, 1179661, 1179649, 9, 1179662, 1179649, 9, 1179663, 1179649, 9, 1179664, 1179649, 9, 1179665, 1179649, 9, 1179666, 1179649, 9, 1179667, 1179649, 9, 1179668, 1179649, 9, 1179669, 1179649, 9, 1179670, 1179649, 9, 1179671, 1179649, 9, 1179672, 1179649, 9, 1179673, 1179649, 9, 1179674, 1179649, 9, 1179675, 1179649, 9, 1179676, 1179649, 9, 1179677, 1179649, 9, 1179678, 1179649, 9, 32, 1179649, 9, 65568, 1179649, 9, 131104, 1179649, 9, 196640, 1179649, 9, 262176, 1179649, 9, 327712, 1179649, 9, 393248, 1179649, 9, 458784, 1179649, 9, 524320, 1179649, 9, 589856, 1179649, 9, 655392, 1179649, 9, 720928, 1179649, 9, 786464, 1179649, 9, 852000, 1179649, 9, 917536, 1179649, 9, 983072, 1179649, 9, 1048608, 1179649, 9, 1114144, 1179649, 9, 1179680, 1179649, 9, 31, 1179649, 9, 1179679, 1179649, 9)
-layer_3/name = "collectibles"
-layer_3/tile_data = PackedInt32Array(524294, 2, 131072, 327687, 2, 131072, 393226, 2, 131072, 393221, 2, 131072, 393223, 2, 196608, 524292, 2, 196608)
 
 [node name="Player" parent="TileMap" instance=ExtResource("1_dkc54")]
 y_sort_enabled = false
@@ -2888,23 +2874,5 @@ endPoint = NodePath("Marker2D")
 position = Vector2(0, 32)
 
 [node name="CanvasLayer" type="CanvasLayer" parent="."]
-process_mode = 3
-script = ExtResource("11_al4is")
 
 [node name="heartsContainer" parent="CanvasLayer" instance=ExtResource("8_f7b3y")]
-
-[node name="InventoryGui" parent="CanvasLayer" instance=ExtResource("12_p3sxk")]
-anchors_preset = 8
-anchor_left = 0.5
-anchor_top = 0.5
-anchor_right = 0.5
-anchor_bottom = 0.5
-offset_left = -69.0
-offset_top = -45.0
-offset_right = 69.0
-offset_bottom = 45.0
-grow_horizontal = 2
-grow_vertical = 2
-
-[connection signal="closed" from="CanvasLayer/InventoryGui" to="." method="_on_inventory_gui_closed"]
-[connection signal="opened" from="CanvasLayer/InventoryGui" to="." method="_on_inventory_gui_opened"]
