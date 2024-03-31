@@ -13,9 +13,8 @@ func _ready():
 	update()
 
 func update():
-	for i in range(min(inventory.items.size(), slots.size())):
-		print_debug(slots)
-		slots[i].update(inventory.items[i])
+	for i in range(min(inventory.slots.size(), slots.size())):
+		slots[i].update(inventory.slots[i])
 
 func open():
 	isOpen = true

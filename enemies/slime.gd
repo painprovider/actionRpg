@@ -11,10 +11,8 @@ var endPosition
 
 func _ready():
 	startPosition = position
-	print(startPosition)
 	endPosition = endPoint.global_position
-	print(endPosition)
-	
+
 func changeDirection():
 	var tempEnd = endPosition
 	endPosition = startPosition
@@ -41,7 +39,6 @@ func handleCollision():
 	for i in get_slide_collision_count():
 		var collision = get_slide_collision(i)
 		var collider = collision.get_collider()
-		print_debug(collider.name)
 		
 
 func _physics_process(_delta):
