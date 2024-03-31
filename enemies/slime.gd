@@ -8,6 +8,7 @@ extends CharacterBody2D
 
 var startPosition
 var endPosition
+var isDead: bool = false
 
 func _ready():
 	startPosition = position
@@ -42,7 +43,17 @@ func handleCollision():
 		
 
 func _physics_process(_delta):
+	if isDead: return
 	updateVelocity()
 	move_and_slide()
 	handleCollision()
 	updateAnimation()
+
+
+func _on_hurt_box_area_entered(area):
+	if area == $hitBox: return
+	$hitBox.set_deferred("monitorable", false)
+	isDead = true
+	animations.play("death")
+	await animations.animation_finished
+	queue_free()
