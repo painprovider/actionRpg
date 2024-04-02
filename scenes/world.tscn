@@ -1,4 +1,4 @@
-[gd_scene load_steps=19 format=3 uid="uid://f3mbu8uxocr5"]
+[gd_scene load_steps=18 format=3 uid="uid://f3mbu8uxocr5"]
 
 [ext_resource type="PackedScene" uid="uid://bdx42kpi3rhof" path="res://player/player.tscn" id="1_dkc54"]
 [ext_resource type="Texture2D" uid="uid://t2yjgecdn0iy" path="res://art/TilesetFloor.png" id="1_g1063"]
@@ -9,7 +9,6 @@
 [ext_resource type="PackedScene" uid="uid://dc2b83w1b3men" path="res://enemies/slime.tscn" id="4_v6fr3"]
 [ext_resource type="PackedScene" uid="uid://bitlm63srxjrr" path="res://collectable/sword.tscn" id="5_dkbiv"]
 [ext_resource type="Script" path="res://scenes/FollowCam.gd" id="6_6pnki"]
-[ext_resource type="Script" path="res://enemies/slime.gd" id="8_7ijk8"]
 [ext_resource type="PackedScene" uid="uid://bb7imwlt2ft3k" path="res://gui/heartsContainer.tscn" id="8_f7b3y"]
 [ext_resource type="Script" path="res://scenes/CanvasLayer.gd" id="11_al4is"]
 [ext_resource type="PackedScene" uid="uid://b3q5i1w0deumv" path="res://gui/inventory_gui.tscn" id="12_p3sxk"]
@@ -2873,7 +2872,6 @@ tilemap = NodePath("../..")
 
 [node name="slime" parent="TileMap" node_paths=PackedStringArray("endPoint") instance=ExtResource("4_v6fr3")]
 position = Vector2(162, 77)
-script = ExtResource("8_7ijk8")
 endPoint = NodePath("Marker2D")
 
 [node name="Marker2D" type="Marker2D" parent="TileMap/slime"]
@@ -2881,7 +2879,6 @@ position = Vector2(20, 39)
 
 [node name="slime2" parent="TileMap" node_paths=PackedStringArray("endPoint") instance=ExtResource("4_v6fr3")]
 position = Vector2(40, 128)
-script = ExtResource("8_7ijk8")
 endPoint = NodePath("Marker2D")
 
 [node name="Marker2D" type="Marker2D" parent="TileMap/slime2"]
