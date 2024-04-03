@@ -1,4 +1,4 @@
-[gd_scene load_steps=22 format=3 uid="uid://f3mbu8uxocr5"]
+[gd_scene load_steps=23 format=3 uid="uid://f3mbu8uxocr5"]
 
 [ext_resource type="PackedScene" uid="uid://bdx42kpi3rhof" path="res://player/player.tscn" id="1_dkc54"]
 [ext_resource type="Texture2D" uid="uid://t2yjgecdn0iy" path="res://art/TilesetFloor.png" id="1_g1063"]
@@ -14,6 +14,7 @@
 [ext_resource type="Script" path="res://scenes/CanvasLayer.gd" id="11_al4is"]
 [ext_resource type="PackedScene" uid="uid://b3q5i1w0deumv" path="res://gui/inventory_gui.tscn" id="12_p3sxk"]
 [ext_resource type="PackedScene" uid="uid://dqootrdy8f58m" path="res://scenes/scene_trigger.tscn" id="14_umm7e"]
+[ext_resource type="AudioStream" uid="uid://6cjqh3w6a4n4" path="res://audio/Lyric Voices #1.wav" id="15_dkx0s"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_2cvbw"]
 texture = ExtResource("1_g1063")
@@ -4846,6 +4847,11 @@ follow_node = NodePath("../Player")
 
 [node name="any" type="Marker2D" parent="EntranceMarkers"]
 position = Vector2(399, 137)
+
+[node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("15_dkx0s")
+volume_db = -10.174
+autoplay = true
 
 [connection signal="closed" from="CanvasLayer/InventoryGui" to="." method="_on_inventory_gui_closed"]
 [connection signal="opened" from="CanvasLayer/InventoryGui" to="." method="_on_inventory_gui_opened"]

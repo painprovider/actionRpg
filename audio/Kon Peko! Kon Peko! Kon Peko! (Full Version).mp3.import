@@ -1,0 +1,19 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+uid="uid://b8q6cvdtnyllj"
+path="res://.godot/imported/Kon Peko! Kon Peko! Kon Peko! (Full Version).mp3-7630e1b9b120b56e0d7e702700e4557e.mp3str"
+
+[deps]
+
+source_file="res://audio/Kon Peko! Kon Peko! Kon Peko! (Full Version).mp3"
+dest_files=["res://.godot/imported/Kon Peko! Kon Peko! Kon Peko! (Full Version).mp3-7630e1b9b120b56e0d7e702700e4557e.mp3str"]
+
+[params]
+
+loop=false
+loop_offset=0
+bpm=0
+beat_count=0
+bar_beats=4

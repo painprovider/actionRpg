@@ -1,10 +1,12 @@
-[gd_scene load_steps=11 format=3 uid="uid://d2do18vyt7pl0"]
+[gd_scene load_steps=13 format=3 uid="uid://d2do18vyt7pl0"]
 
 [ext_resource type="Script" path="res://scenes/base_scene.gd" id="1_bloil"]
 [ext_resource type="Texture2D" uid="uid://367hv7pdgeb0" path="res://art/TilesetWallSimple-transparentbg.png" id="1_j51v2"]
 [ext_resource type="Texture2D" uid="uid://t2yjgecdn0iy" path="res://art/TilesetFloor.png" id="2_ejfqv"]
 [ext_resource type="Texture2D" uid="uid://d2wg00ljwpxe4" path="res://art/TilesetHouse.png" id="3_p818l"]
 [ext_resource type="PackedScene" uid="uid://dqootrdy8f58m" path="res://scenes/scene_trigger.tscn" id="5_cqplj"]
+[ext_resource type="PackedScene" uid="uid://bdx42kpi3rhof" path="res://player/player.tscn" id="6_qp2hp"]
+[ext_resource type="AudioStream" uid="uid://b8q6cvdtnyllj" path="res://audio/Kon Peko! Kon Peko! Kon Peko! (Full Version).mp3" id="7_xv2vx"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_xvas2"]
 texture = ExtResource("1_j51v2")
@@ -1233,3 +1235,10 @@ connected_scene = "world"
 [node name="CollisionShape2D" type="CollisionShape2D" parent="SceneTrigger"]
 position = Vector2(95, 104)
 shape = SubResource("RectangleShape2D_xgi58")
+
+[node name="Player" parent="." instance=ExtResource("6_qp2hp")]
+position = Vector2(48, 88)
+
+[node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("7_xv2vx")
+autoplay = true
