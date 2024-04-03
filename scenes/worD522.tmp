@@ -4800,6 +4800,7 @@ position = Vector2(0, 32)
 
 [node name="CanvasLayer" type="CanvasLayer" parent="."]
 process_mode = 3
+visible = false
 script = ExtResource("11_al4is")
 
 [node name="heartsContainer" parent="CanvasLayer" instance=ExtResource("8_f7b3y")]
@@ -4836,16 +4837,9 @@ limit_left = 0
 limit_top = 0
 limit_right = 496
 limit_bottom = 306
-limit_smoothed = true
-position_smoothing_enabled = true
 script = ExtResource("6_6pnki")
 tilemap = NodePath("../TileMap")
 follow_node = NodePath("../Player")
-
-[node name="EntranceMarkers" type="Node2D" parent="."]
-
-[node name="any" type="Marker2D" parent="EntranceMarkers"]
-position = Vector2(399, 137)
 
 [connection signal="closed" from="CanvasLayer/InventoryGui" to="." method="_on_inventory_gui_closed"]
 [connection signal="opened" from="CanvasLayer/InventoryGui" to="." method="_on_inventory_gui_opened"]
