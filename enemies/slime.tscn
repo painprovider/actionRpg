@@ -1,8 +1,9 @@
-[gd_scene load_steps=14 format=3 uid="uid://dc2b83w1b3men"]
+[gd_scene load_steps=15 format=3 uid="uid://dc2b83w1b3men"]
 
 [ext_resource type="Texture2D" uid="uid://dieynvlibjjqm" path="res://art/Slime.png" id="1_iskxb"]
 [ext_resource type="Script" path="res://enemies/slime.gd" id="1_nf7h3"]
 [ext_resource type="Texture2D" uid="uid://dv30jn3cmf1td" path="res://art/smoke.png" id="3_64j5j"]
+[ext_resource type="AudioStream" uid="uid://cs5p1n6q0b38a" path="res://audio/sakura-miko-faq-2.mp3" id="4_p5xl3"]
 
 [sub_resource type="CapsuleShape2D" id="CapsuleShape2D_60uxb"]
 radius = 4.0
@@ -352,5 +353,8 @@ shape = SubResource("CapsuleShape2D_3wlfe")
 visible = false
 texture = ExtResource("3_64j5j")
 hframes = 6
+
+[node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("4_p5xl3")
 
 [connection signal="area_entered" from="hurtBox" to="." method="_on_hurt_box_area_entered"]
