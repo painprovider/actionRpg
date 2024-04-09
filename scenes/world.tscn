@@ -1,4 +1,4 @@
-[gd_scene load_steps=23 format=3 uid="uid://f3mbu8uxocr5"]
+[gd_scene load_steps=25 format=3 uid="uid://f3mbu8uxocr5"]
 
 [ext_resource type="PackedScene" uid="uid://bdx42kpi3rhof" path="res://player/player.tscn" id="1_dkc54"]
 [ext_resource type="Texture2D" uid="uid://t2yjgecdn0iy" path="res://art/TilesetFloor.png" id="1_g1063"]
@@ -13,6 +13,8 @@
 [ext_resource type="PackedScene" uid="uid://bb7imwlt2ft3k" path="res://gui/heartsContainer.tscn" id="8_f7b3y"]
 [ext_resource type="Script" path="res://scenes/CanvasLayer.gd" id="11_al4is"]
 [ext_resource type="PackedScene" uid="uid://b3q5i1w0deumv" path="res://gui/inventory_gui.tscn" id="12_p3sxk"]
+[ext_resource type="PackedScene" uid="uid://3tcu6t0hlesv" path="res://gui/hotbar.tscn" id="12_yuy40"]
+[ext_resource type="Script" path="res://gui/hotbar.gd" id="13_4n0eu"]
 [ext_resource type="PackedScene" uid="uid://dqootrdy8f58m" path="res://scenes/scene_trigger.tscn" id="14_umm7e"]
 [ext_resource type="AudioStream" uid="uid://6cjqh3w6a4n4" path="res://audio/Lyric Voices #1.wav" id="15_dkx0s"]
 
@@ -4792,6 +4794,41 @@ endPoint = NodePath("Marker2D")
 [node name="Marker2D" type="Marker2D" parent="TileMap/slime"]
 position = Vector2(20, 39)
 
+[node name="slime3" parent="TileMap" node_paths=PackedStringArray("endPoint") instance=ExtResource("4_v6fr3")]
+position = Vector2(352, 240)
+endPoint = NodePath("../slime/Marker2D")
+
+[node name="Marker2D" type="Marker2D" parent="TileMap/slime3"]
+position = Vector2(20, 39)
+
+[node name="slime5" parent="TileMap" node_paths=PackedStringArray("endPoint") instance=ExtResource("4_v6fr3")]
+position = Vector2(457, 226)
+endPoint = NodePath("../slime/Marker2D")
+
+[node name="Marker2D" type="Marker2D" parent="TileMap/slime5"]
+position = Vector2(20, 39)
+
+[node name="slime7" parent="TileMap" node_paths=PackedStringArray("endPoint") instance=ExtResource("4_v6fr3")]
+position = Vector2(325, 162)
+endPoint = NodePath("../slime/Marker2D")
+
+[node name="Marker2D" type="Marker2D" parent="TileMap/slime7"]
+position = Vector2(20, 39)
+
+[node name="slime6" parent="TileMap" node_paths=PackedStringArray("endPoint") instance=ExtResource("4_v6fr3")]
+position = Vector2(439, 271)
+endPoint = NodePath("../slime/Marker2D")
+
+[node name="Marker2D" type="Marker2D" parent="TileMap/slime6"]
+position = Vector2(20, 39)
+
+[node name="slime4" parent="TileMap" node_paths=PackedStringArray("endPoint") instance=ExtResource("4_v6fr3")]
+position = Vector2(380, 166)
+endPoint = NodePath("../slime/Marker2D")
+
+[node name="Marker2D" type="Marker2D" parent="TileMap/slime4"]
+position = Vector2(20, 39)
+
 [node name="slime2" parent="TileMap" node_paths=PackedStringArray("endPoint") instance=ExtResource("4_v6fr3")]
 position = Vector2(40, 128)
 endPoint = NodePath("Marker2D")
@@ -4817,6 +4854,20 @@ offset_right = 69.0
 offset_bottom = 45.0
 grow_horizontal = 2
 grow_vertical = 2
+
+[node name="Hotbar" parent="CanvasLayer" instance=ExtResource("12_yuy40")]
+anchors_preset = 7
+anchor_left = 0.5
+anchor_top = 1.0
+anchor_right = 0.5
+anchor_bottom = 1.0
+offset_left = -58.0
+offset_top = -40.0
+offset_right = 58.0
+offset_bottom = 0.0
+grow_horizontal = 2
+grow_vertical = 0
+script = ExtResource("13_4n0eu")
 
 [node name="SceneTrigger" parent="." instance=ExtResource("14_umm7e")]
 position = Vector2(400, 120)
