@@ -1,0 +1,18 @@
+[gd_scene load_steps=4 format=3 uid="uid://cpbycc0tgqmpb"]
+
+[ext_resource type="Script" path="res://player/equipables/pickaxe.gd" id="1_3elxs"]
+[ext_resource type="Texture2D" uid="uid://cn03eyxxamm6q" path="res://art/Pickaxe.png" id="1_gyp1v"]
+
+[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_qjmm0"]
+radius = 6.0
+height = 14.0
+
+[node name="Pickaxe" type="Area2D"]
+script = ExtResource("1_3elxs")
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+texture = ExtResource("1_gyp1v")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2(0, -2)
+shape = SubResource("CapsuleShape2D_qjmm0")

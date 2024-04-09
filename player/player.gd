@@ -28,6 +28,7 @@ func _ready():
 	effects.play("RESET")
 	weapon.disable()
 
+
 func handleInput():
 	var moveDirection = Input.get_vector("ui_left", "ui_right", "ui_up", "ui_down")
 	velocity = moveDirection * speed

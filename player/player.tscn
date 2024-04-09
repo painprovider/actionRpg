@@ -1,10 +1,11 @@
-[gd_scene load_steps=21 format=3 uid="uid://bdx42kpi3rhof"]
+[gd_scene load_steps=22 format=3 uid="uid://bdx42kpi3rhof"]
 
 [ext_resource type="Script" path="res://player/player.gd" id="1_b8ryv"]
 [ext_resource type="Resource" uid="uid://ceu0a5w3gb8sv" path="res://inventory/playerInventory.tres" id="2_bk3ax"]
 [ext_resource type="Texture2D" uid="uid://ccyyhybk47sry" path="res://art/player_sprites.png" id="3_tui53"]
-[ext_resource type="Script" path="res://player/weapon.gd" id="4_lipoi"]
-[ext_resource type="PackedScene" uid="uid://ctkajaxwmscq" path="res://player/sword.tscn" id="4_rqbuo"]
+[ext_resource type="Script" path="res://player/equipables/weapon.gd" id="4_c8mkb"]
+[ext_resource type="PackedScene" uid="uid://ctkajaxwmscq" path="res://player/equipables/sword.tscn" id="5_w4cvn"]
+[ext_resource type="PackedScene" uid="uid://cpbycc0tgqmpb" path="res://player/equipables/pickaxe.tscn" id="6_3d7d7"]
 
 [sub_resource type="Animation" id="Animation_8igat"]
 length = 0.001
@@ -382,10 +383,12 @@ one_shot = true
 [node name="weapon" type="Node2D" parent="."]
 position = Vector2(6, 1)
 rotation = 2.0944
-script = ExtResource("4_lipoi")
+script = ExtResource("4_c8mkb")
 
-[node name="sword" parent="weapon" instance=ExtResource("4_rqbuo")]
+[node name="sword" parent="weapon" instance=ExtResource("5_w4cvn")]
 position = Vector2(-1.74535e-07, -1.74531e-07)
+
+[node name="Pickaxe" parent="weapon" instance=ExtResource("6_3d7d7")]
 
 [connection signal="area_entered" from="hurtBox" to="." method="_on_hurt_box_area_entered"]
 [connection signal="area_exited" from="hurtBox" to="." method="_on_hurt_box_area_exited"]
