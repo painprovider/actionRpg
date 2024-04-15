@@ -92,6 +92,12 @@ func knockback(enemyVelocity):
 	var knockbackDirection = (enemyVelocity-velocity).normalized() * knockbackPower
 	velocity = knockbackDirection
 	move_and_slide()
+	
+func increase_health(amount: int) -> void:
+	currentHealth += amount
+	currentHealth = min(maxHealth, currentHealth)
+	
+	healthChanged.emit(currentHealth)
 
 
 func _on_hurt_box_area_exited(area): pass
