@@ -26,6 +26,7 @@ var isAttacking: bool = false
 
 func _ready():
 	effects.play("RESET")
+	inventory.use_item.connect(use_item)
 	weapon.disable()
 
 
@@ -98,6 +99,9 @@ func increase_health(amount: int) -> void:
 	currentHealth = min(maxHealth, currentHealth)
 	
 	healthChanged.emit(currentHealth)
+	
+func use_item(item: InventoryItem) -> void:
+	item.use(self)
 
 
 func _on_hurt_box_area_exited(area): pass

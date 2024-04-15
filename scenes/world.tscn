@@ -1,4 +1,4 @@
-[gd_scene load_steps=25 format=3 uid="uid://f3mbu8uxocr5"]
+[gd_scene load_steps=24 format=3 uid="uid://f3mbu8uxocr5"]
 
 [ext_resource type="PackedScene" uid="uid://bdx42kpi3rhof" path="res://player/player.tscn" id="1_dkc54"]
 [ext_resource type="Texture2D" uid="uid://t2yjgecdn0iy" path="res://art/TilesetFloor.png" id="1_g1063"]
@@ -14,7 +14,6 @@
 [ext_resource type="Script" path="res://scenes/CanvasLayer.gd" id="11_al4is"]
 [ext_resource type="PackedScene" uid="uid://b3q5i1w0deumv" path="res://gui/inventory_gui.tscn" id="12_p3sxk"]
 [ext_resource type="PackedScene" uid="uid://3tcu6t0hlesv" path="res://gui/hotbar.tscn" id="12_yuy40"]
-[ext_resource type="Script" path="res://gui/hotbar.gd" id="13_4n0eu"]
 [ext_resource type="PackedScene" uid="uid://dqootrdy8f58m" path="res://scenes/scene_trigger.tscn" id="14_umm7e"]
 [ext_resource type="AudioStream" uid="uid://6cjqh3w6a4n4" path="res://audio/Lyric Voices #1.wav" id="15_dkx0s"]
 
@@ -4867,7 +4866,6 @@ offset_right = 58.0
 offset_bottom = 0.0
 grow_horizontal = 2
 grow_vertical = 0
-script = ExtResource("13_4n0eu")
 
 [node name="SceneTrigger" parent="." instance=ExtResource("14_umm7e")]
 position = Vector2(400, 120)
